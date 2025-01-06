@@ -5,6 +5,7 @@ import Landing from "./components/Landing.jsx";
 import Nav from "./components/Nav.jsx";
 import Highlights from './components/Highlights.jsx';
 import Featured from './components/Featured.jsx';
+import Discounted from './components/Discounted.jsx';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
     <Nav />
     <Landing />
     <Highlights />
-    <Featured />  
+    <Featured /> 
+     <Discounted />
    </div>
   );
 }
