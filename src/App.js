@@ -28,7 +28,7 @@ function App() {
     }))
    }
    else {
-    
+    setCart([...cart, {...book, quantity: 1}]);
    }
   }
 
