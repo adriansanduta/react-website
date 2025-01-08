@@ -40,10 +40,20 @@ const BookInfo = ({books}) => {
                         </p>
                        </div>
                        <button className="btn">
-                        Add to cart
+                        Add to Cart
                        </button>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div className="books__container">
+            <div className="row">
+                <div className="book__selected--top">
+                    <h2 className="book__selected--title--top">
+                        Recommended Books
+                    </h2>
+                </div>
+
             </div>
         </div>
         </main> 
