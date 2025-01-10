@@ -1,6 +1,16 @@
 import React from 'react';
 
 const Cart = ({cart, changeQuantity}) => {
+    const total = () => {
+        let price = 0;
+        cart.forEach ((item) => {
+            price += +(item.salePrice || item.originalPrice).toFixed(2);
+        });
+        return price;
+    };
+    const subTotal = () => {
+
+    }
     return (
         <div id="books__body">
             <main id="books__main">
@@ -38,7 +48,7 @@ const Cart = ({cart, changeQuantity}) => {
                                         <input type="number" min={0} max={99} class="cart__input" value={book.quantity} onChange={(event) => changeQuantity(book, event.target.value)} />
                                     </div>
                                     <div className="cart__total">
-                                        $10.00
+                                        ${((book.salePrice || book.originalPrice) * book.quantity).toFixed(2)}
                                     </div>
                                 </div>
                                         )
@@ -78,7 +88,7 @@ const Cart = ({cart, changeQuantity}) => {
                         </div>
                         <div className="total__item total__price">
                             <span>Total</span>
-                            <span>$10.00</span>
+                            <span>${total()}</span>
                         </div>
                         <button className="btn btn__checkout no-cursor"
                         onClick={() => alert(`Haven't got around to doing this :( `)}>
